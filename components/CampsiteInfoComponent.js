@@ -54,7 +54,7 @@ function RenderCampsite(props) {
                   ],
                   { cancelable: false }
               );
-              }   else if(recognizeComment(gestureState)) {
+              } else if(recognizeComment(gestureState)) {
                 props.onShowModal();
           }
           return true;
@@ -150,7 +150,7 @@ class CampsiteInfo extends Component {
       this.state.rating,
       this.state.author,
       this.state.text
-    );
+    )
     this.toggleModal();
   }
 
@@ -160,7 +160,7 @@ class CampsiteInfo extends Component {
       rating: 5,
       author: "",
       text: "",
-    });
+    })
   }
 
   markFavorite(campsiteId) {
@@ -169,7 +169,7 @@ class CampsiteInfo extends Component {
 
   static navigationOptions = {
     title: "Campsite Information",
-  };
+  }
 
   render() {
     const campsiteId = this.props.navigation.getParam("campsiteId");

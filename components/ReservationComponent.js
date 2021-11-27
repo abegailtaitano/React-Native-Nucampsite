@@ -22,17 +22,12 @@ class Reservation extends Component {
         title: 'Reserve Campsite'
     }
     
-    /*toggleModal() {
-        this.setState({showModal: !this.state.showModal});
-    } */
-
     handleReservation() {
         console.log(JSON.stringify(this.state));
-       /* this.toggleModal();*/
        Alert.alert(
            "Begin Search?",
-           "Number of Campers: " + this.state.campers + "\n" + 
-           "Hike-In: " + this.state.hikeIn + "\n" +
+           "Number of Campers: " + this.state.campers + "\n" + "\n" +
+           "Hike-In: " + this.state.hikeIn + "\n" + "\n" +
            "Date: " + this.state.date.toLocaleDateString('en-US'),
            [
                {
@@ -59,17 +54,6 @@ class Reservation extends Component {
         });
     }
     
-   /* UNCOMMENT IF DOESNT WORK
-   handleReservation() {
-        console.log(JSON.stringify(this.state));
-        this.setState({
-            campers: 1,
-            hikeIn: false,
-            date: new Date(),
-            showCalendar: false     
-        });
-    }*/
-
     render() {
         return (
             <ScrollView>
